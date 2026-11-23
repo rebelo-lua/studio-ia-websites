@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eeeae9">
+  <title>Deisy Gimenes · Estética Facial</title>
+  <style>
+    :root {
+      --page: #eeeae9;
+      --paper: #f8f5f3;
+      --ink: #47362c;
+      --muted: #74665d;
+      --gold: #896747;
+      --line: #d8c7b8;
+      --shadow: 0 5px 14px rgba(70, 51, 39, .08);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body {
+      color: var(--ink);
+      background: var(--page);
+      font-family: Arial, Helvetica, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .page {
+      width: min(100%, 390px);
+      min-height: 844px;
+      margin: 0 auto;
+      padding: 25px 23px 18px;
+      display: flex;
+      flex-direction: column;
+    }
+    .hero {
+      position: relative;
+      flex: none;
+      aspect-ratio: 1;
+      margin: -8px -5px 8px;
+    }
+    .hero-image {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .hero-copy {
+      position: absolute;
+      z-index: 1;
+      top: 56%;
+      left: 1%;
+      width: 40%;
+      padding: 5px 8px 6px 0;
+      background: var(--page);
+    }
+    .hero-copy h1 {
+      margin: 0 0 6px;
+      font: 400 20px/1.08 Georgia, 'Times New Roman', serif;
+      letter-spacing: -.025em;
+    }
+    .hero-copy p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 10px;
+      line-height: 1.4;
+    }
+    .primary {
+      display: flex;
+      min-height: 49px;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      margin-bottom: 17px;
+      border-radius: 15px;
+      color: #fffaf5;
+      background: var(--gold);
+      box-shadow: 0 5px 13px rgba(75, 53, 37, .14);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .035em;
+      text-decoration: none;
+    }
+    .primary .arrow { font-size: 17px; font-weight: 400; }
+    .section-title {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin: 0 2px 9px;
+    }
+    .section-title h2 {
+      margin: 0;
+      font: 400 20px/1.2 Georgia, 'Times New Roman', serif;
+    }
+    .section-title span { color: var(--muted); font-size: 10px; }
+    .links { display: grid; gap: 8px; }
+    .link {
+      min-height: 61px;
+      display: grid;
+      grid-template-columns: 40px minmax(0, 1fr) 24px;
+      align-items: center;
+      gap: 11px;
+      padding: 8px 12px;
+      border: 1px solid rgba(137, 103, 71, .12);
+      border-radius: 16px;
+      color: inherit;
+      background: var(--paper);
+      box-shadow: var(--shadow);
+      text-decoration: none;
+    }
+    .icon {
+      width: 39px;
+      height: 39px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(137, 103, 71, .2);
+      border-radius: 50%;
+      color: var(--gold);
+      background: #f1e8e1;
+    }
+    .icon svg { width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+    .link strong {
+      display: block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+    }
+    .link small {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 10px;
+      line-height: 1.25;
+    }
+    .chevron { color: var(--gold); font: 24px/1 Georgia, serif; text-align: center; }
+    .footer {
+      display: grid;
+      justify-items: center;
+      gap: 6px;
+      margin-top: auto;
+      padding-top: 16px;
+      color: var(--muted);
+      text-align: center;
+    }
+    .footer a {
+      color: var(--gold);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    .footer small { font-size: 9px; }
+    @media (max-width: 350px) {
+      .page { padding-right: 16px; padding-left: 16px; }
+      .hero-copy { width: 42%; }
+      .hero-copy h1 { font-size: 18px; }
+      .link { grid-template-columns: 36px minmax(0, 1fr) 20px; gap: 9px; padding-right: 9px; padding-left: 9px; }
+      .icon { width: 35px; height: 35px; }
+    }
+    /* Alinha o canvas móvel nos renderizadores headless que mantêm largura mínima. */
+    @media (min-width: 391px) and (max-width: 500px) {
+      body { width: 390px; }
+    }
+    @media (max-height: 760px) {
+      .page { min-height: 760px; padding-top: 18px; padding-bottom: 14px; }
+      .hero { margin-bottom: 4px; }
+      .hero-copy h1 { font-size: 18px; }
+      .primary { min-height: 45px; margin-bottom: 12px; }
+      .link { min-height: 56px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero" aria-labelledby="title">
+      <img class="hero-image" src="Hero-site-link-bio-web.jpg" alt="Logotipo Deisy Gimenes ao lado de seu retrato">
+      <div class="hero-copy">
+        <h1 id="title">Cuidado facial pensado para você.</h1>
+        <p>Conheça os tratamentos e fale com a Deisy sobre os cuidados com a sua pele.</p>
+      </div>
+    </section>
+
+    <a class="primary" href="https://www.instagram.com/deisyestetica_braga/" target="_blank" rel="noopener noreferrer">
+      <span>Fale com a Deisy</span><span class="arrow" aria-hidden="true">↗</span>
+    </a>
+
+    <section aria-labelledby="links-title">
+      <div class="section-title"><h2 id="links-title">Acesse com facilidade</h2><span>Escolha uma opção</span></div>
+      <nav class="links" aria-label="Links principais">
+        <a class="link" href="https://www.instagram.com/deisyestetica_braga/" target="_blank" rel="noopener noreferrer">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16M8 14h2M14 14h2M8 17h2"/></svg></span>
+          <span><strong>Agendamento</strong><small>Converse com a Deisy para combinar seu horário.</small></span><span class="chevron" aria-hidden="true">›</span>
+        </a>
+        <a class="link" href="https://www.instagram.com/deisyestetica_braga/" target="_blank" rel="noopener noreferrer">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 4h10l4 4v12H5zM15 4v5h4M8 13h8M8 16h8"/></svg></span>
+          <span><strong>Tratamentos faciais</strong><small>Conheça os cuidados disponíveis.</small></span><span class="chevron" aria-hidden="true">›</span>
+        </a>
+        <a class="link" href="https://www.instagram.com/deisyestetica_braga/" target="_blank" rel="noopener noreferrer">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><circle cx="9" cy="9" r="1.5"/><path d="m5 17 5-5 3 3 2-2 4 4"/></svg></span>
+          <span><strong>Resultados e feedback</strong><small>Veja publicações no Instagram.</small></span><span class="chevron" aria-hidden="true">›</span>
+        </a>
+        <a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=Rua+Cruz+de+Pedra+124%2C+Braga%2C+Portugal" target="_blank" rel="noopener noreferrer">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2.3"/></svg></span>
+          <span><strong>Localização</strong><small>Encontre o espaço em Braga.</small></span><span class="chevron" aria-hidden="true">›</span>
+        </a>
+      </nav>
+    </section>
+
+    <footer class="footer">
+      <a href="https://www.instagram.com/deisyestetica_braga/" target="_blank" rel="noopener noreferrer">Instagram · @deisyestetica_braga</a>
+      <small>Deisy Gimenes · Estética Facial</small>
+    </footer>
+  </main>
+</body>
+</html>
